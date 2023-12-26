@@ -1,93 +1,106 @@
-# oneplus-nord-n100
+# OnePlus Nord N100
+______________________
+
+![](./refs/n100.png)
+______________________
+OnePlus Nord N100
+
+OnePlus Nord N100 (billie2) specs
+==========================================
 
 
+| Basic                   | Spec Sheet                                                                                                                     |
+| -----------------------:|:------------------------------------------------------------------------------------------------------------------------------ |
+| CPU                     | Octa-core (4x1.8 GHz Kryo 240 & 4x1.6 GHz Kryo 240)                                                                                                                      |
+| Chipset                 | Qualcomm SM4250 Snapdragon 460 (11 nm)                                                                                                            |
+| GPU                     | Adreno 610                                                                                                                   |
+| Memory                  | 4 GB RAM                                                                                                                     |
+| Shipped Android Version | Android 10, OxygenOS 10.5                                                                                                                           |
+| Storage                 |64GB                                                                                                                  |
+| Battery                 | Li-Po 5000 mAh, non-removable battery                                                                                           |
+| Display                 | 720 x 1600 pixels, 20:9 ratio (~269 ppi density)                                                                            |
+| Camera (Back)(Main)     | 13 MP, f/2.2, (wide), PDAF 2 MP, f/2.4, (macro) 2 MP, f/2.4, (depth)                                                                                |
+| Camera (Front)          | 8 MP, f/2.0
+| Kernel Version          | 4.19.95 "People's Front"
+| Platform          | bengal
 
-## Getting started
+## Firmware
+- This builds are based on OxygenOS 10.5.2 for UE and 10.5.3 for Global
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+| Region                   | firmware                                                                                                                     |
+| -----------------------:|:------------------------------------------------------------------------------------------------------------------------------ |
+|EU | BE83BA https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_Nord_N100/EU_BE83BA/Q/OnePlus_Nord_N100_EU_OxygenOS_10.5.2.zip
+|Global | BE81AA https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_Nord_N100/Global_BE81AA/Q/OnePlus_Nord_N100_Global_OxygenOS_10.5.3.zip
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-## Add your files
+## Unsuported Devices/versions/Firmware
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+ Region                   | firmware                                                                                                                     |
+| -----------------------:|:------------------------------------------------------------------------------------------------------------------------------ |
+|US Metro by T-Mobile| BE82CF https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_Nord_N100/Metro_by_T-Mobile_BE82CF/Q/OnePlus_Nord_N100_Metro-by-T-Mobile_OxygenOS_10.5.8.zip
+|US T-Mobile | BE82CB https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_Nord_N100/T-Mobile_BE82CB/Q/OnePlus_Nord_N100_T-Mobile_OxygenOS_10.5.8.zip
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/uports/h10/oneplus-nord-n100/oneplus-nord-n100.git
-git branch -M main
-git push -uf origin main
-```
+## Unlock bootloader
+- Boot the device, do not connect to wifi or create any account we don not need that. Setup the device offline
+- Once you boot to the menu go to Settings -> About phone and tap build number until you see " You are now a Developer"
+<p float="center">
+  <img src="./refs/Screenshot_20201031-114627.jpg" width="200" />
+  <img src="./refs/Screenshot_20201031-114652.jpg" width="200" /> 
+</p>
 
-## Integrate with your tools
+</div>
+- Now Connect to wifi network
+- Go back to Settings -> System -> Developer Options and enable OEM Unlocking.
+- Power off the device VOLUME UP + POWER
+- Power on Holding VOLUME UP + POWER to enter FASTBOOT MODE
+- Now run the following command:
 
-- [ ] [Set up project integrations](https://gitlab.com/uports/h10/oneplus-nord-n100/oneplus-nord-n100/-/settings/integrations)
+` fastboot flashing unlock `
 
-## Collaborate with your team
+- Confirm on the device using the VOLUME keys and the power button to unlock the bootloader.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+# What works so far?
 
-## Test and Deploy
+### Progress
+![100%](https://progress-bar.dev/100) Ubuntu 20.04 Focal
 
-Use the built-in continuous integration in GitLab.
+- [X] Recovery
+- [X] Boot
+- [X] Bluetooth
+- [X] Camera Fotos and Video Recording
+- [X] GPS
+- [X] Audio works
+- [X] Bluetooth Audio
+- [X] Waydroid
+- [X] MTP
+- [X] ADB
+- [X] SSH
+- [X] Online charge
+- [X] Offline Charge
+- [X] Wifi
+- [X] Calls
+- [X] Mobile Data 2G/3G/4G (LTE)
+- [X] Ofono
+- [X] SDCard
+- [X] Wireless display
+- [X] Fingerprint Reader
+- [X] OTG Works
+- [X] Camera Flash
+- [X] Manual Brightness Works
+- [X] Switching between cameras
+- [X] Hardware video playback
+- [X] Rotation
+- [X] Proximity sensor
+- [X] Virtualization
+- [X] GPU
+- [X] Lightsensor
+- [X] Proximity sensor
+- [X] Automatic brightness
+- [X] Torch
+- [X] Hotspot
+- [X] Airplane Mode
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## Im not endorsed or founded by UBports Foundation and i do this for fun but does take time work and resources, so if you want to support and apreciate my work pleaso do Donate:
+___________________________________
+<center>
+<a href="https://paypal.me/rubencarneiro?locale.x=pt_PT" title="PayPal" onclick="javascript:window.open('https://paypal.me/rubencarneiro?locale.x=pt_PT','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-150px.png" border="0" alt="PayPal Logo"></a>
