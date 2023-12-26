@@ -41,7 +41,7 @@ OnePlus Nord N100 (billie2) specs
 |US Metro by T-Mobile| BE82CF https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_Nord_N100/Metro_by_T-Mobile_BE82CF/Q/OnePlus_Nord_N100_Metro-by-T-Mobile_OxygenOS_10.5.8.zip
 |US T-Mobile | BE82CB https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_Nord_N100/T-Mobile_BE82CB/Q/OnePlus_Nord_N100_T-Mobile_OxygenOS_10.5.8.zip
 
-##Verizon variants dont even try the bootloader is locked and cant be unlocked.
+## Verizon variants dont even try the bootloader is locked and cant be unlocked.
 
 ## Unlock bootloader
 - Boot the device, do not connect to wifi or create any account we don not need that. Setup the device offline
@@ -66,25 +66,26 @@ OnePlus Nord N100 (billie2) specs
 
 - Download latest CI build
 - Flash boot.img
-`` fastboot flash boot ./boot.img ``
+` fastboot flash boot ./boot.img `
+
 - Flash recovery.img
-`` fastboot flash recovery ./recovery.img ``
+` fastboot flash recovery ./recovery.img `
 - Reboot to fastbootd
-`` fastboot format:ext4 userdata ``
+` fastboot format:ext4 userdata `
 - Delete logic partitions
-`` fastboot delete-logical-partition system_ext_a ``
-`` fastboot delete-logical-partition system_ext_b ``
-`` fastboot delete-logical-partition product_a ``
-`` fastboot delete-logical-partition product_b ``
-`` fastboot delete-logical-partition system_b ``
-`` fastboot delete-logical-partition vendor_b ``
-`` fastboot delete-logical-partition odm_b ``
+` fastboot delete-logical-partition system_ext_a `
+` fastboot delete-logical-partition system_ext_b `
+` fastboot delete-logical-partition product_a `
+` fastboot delete-logical-partition product_b `
+` fastboot delete-logical-partition system_b `
+` fastboot delete-logical-partition vendor_b `
+` fastboot delete-logical-partition odm_b `
 - Resize system_a partition
-`` fastboot resize-logical-partition system_a 3221225472 ``
+` fastboot resize-logical-partition system_a 3221225472 ``
 - Flash ubuntu Rootfs
-`` fastboot flash system_a ./ubuntu.img ``
+` fastboot flash system_a ./ubuntu.img `
 - Reboot the device
-`` fastboot reboot ``
+` fastboot reboot `
 # What works so far?
 
 ### Progress
