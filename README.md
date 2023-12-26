@@ -65,27 +65,44 @@ OnePlus Nord N100 (billie2) specs
 ### Install from CI
 
 - Download latest CI build
-- Flash boot.img
-` fastboot flash boot ./boot.img `
-
-- Flash recovery.img
-` fastboot flash recovery ./recovery.img `
-- Reboot to fastbootd
-` fastboot format:ext4 userdata `
-- Delete logic partitions
-` fastboot delete-logical-partition system_ext_a `
-` fastboot delete-logical-partition system_ext_b `
-` fastboot delete-logical-partition product_a `
-` fastboot delete-logical-partition product_b `
-` fastboot delete-logical-partition system_b `
-` fastboot delete-logical-partition vendor_b `
-` fastboot delete-logical-partition odm_b `
+- Flash boot.img:
+```console
+fastboot flash boot ./boot.img
+```
+- Flash recovery.img:
+```console
+fastboot flash recovery ./recovery.img
+```
+- Reboot to fastbootd:
+```console
+fastboot reboot fastbootd
+```
+- Format userdata
+```console
+fastboot format:ext4 userdata
+```
+- Delete logic partitions:
+```console
+fastboot delete-logical-partition system_ext_a
+fastboot delete-logical-partition system_ext_b
+fastboot delete-logical-partition product_a
+fastboot delete-logical-partition product_b
+fastboot delete-logical-partition system_b
+fastboot delete-logical-partition vendor_b
+fastboot delete-logical-partition odm_b
+```
 - Resize system_a partition
-` fastboot resize-logical-partition system_a 3221225472 ``
+```console
+fastboot resize-logical-partition system_a 3221225472
+```
 - Flash ubuntu Rootfs
-` fastboot flash system_a ./ubuntu.img `
+```console
+fastboot flash system_a ./ubuntu.img
+```
 - Reboot the device
-` fastboot reboot `
+```console
+fastboot reboot
+```
 # What works so far?
 
 ### Progress
