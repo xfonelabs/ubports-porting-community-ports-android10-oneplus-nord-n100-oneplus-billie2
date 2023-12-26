@@ -58,8 +58,9 @@ OnePlus Nord N100 (billie2) specs
 - Power on Holding VOLUME UP + POWER to enter FASTBOOT MODE
 - Now run the following command:
 
-` fastboot flashing unlock `
-
+```console
+fastboot flashing unlock
+```
 - Confirm on the device using the VOLUME keys and the power button to unlock the bootloader.
 
 ### Install from CI
