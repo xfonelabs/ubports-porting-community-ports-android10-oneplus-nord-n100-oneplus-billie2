@@ -1,0 +1,30 @@
+billie2:
+  Vendor: OnePlus
+  codename: billie2
+  Names:
+    - Nord N100
+    - billie2
+    - OnePlus Nord N100
+  PrettyName: OnePlus Nord N100
+  DeviceType: phone
+  GridUnit: 16
+  SupportedOrientations:
+    - Portrait
+    - Landscape
+    - InvertedLandscape
+  BacklightSysfsPath:
+    - /sys/class/backlight/panel0-backlight
+  FlashlightSysfsPath:
+    - /sys/class/leds/led:torch_0/brightness
+  FlashlightSwitchPath:
+    - /sys/class/leds/led:switch_0/brightness
+  MirAndroidPlatformServerBackpressure:
+    - false
+  MirAndroidPlatformServerPartialUpdates:
+    - true
+  MirAndroidPlatformServerEglSync:
+    - false
+  MirAndroidPlatformClientEglFlush:
+    - "all"
+  XwaylandShm:
+    - true
