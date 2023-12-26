@@ -1,0 +1,2 @@
+load-module module-droid-discover rate=48000 voice_virtual_stream=true
+
